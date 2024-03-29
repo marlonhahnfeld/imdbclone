@@ -7,7 +7,7 @@ export default function Card({ result }) {
   return (
     <div className="card max-w-48 max-h-auto mb-8 bg-base-100 shadow-xl mx-4 bg-slate-400 dark:bg-slate-700 hover:opacity-75 cursor-pointer ">
       <Link href={`/movie/${result.id}`}>
-        <figure>
+        <div>
           <Image
             src={`https://image.tmdb.org/t/p/original/${
               result.poster_path || result.backdrop_path
@@ -17,16 +17,15 @@ export default function Card({ result }) {
             height={200}
             className="sm:rounded-sm"
           />
-        </figure>
-        <div className="card-body flex justify-center pb-1">
-          <h2 className="card-title">{result.title || result.name}</h2>
-          <div className="flex flex-col flex-end items-center">
-            <p className="">
-              {result.release_date || result.first_air_date}
-
-              <MdThumbUp className="mt-3" />
-              {result.vote_count}
-            </p>
+          <div className="card-body flex flex-col pb-1 h-full">
+            <h2 className="card-title line-clamp-2 ">
+              {result.title || result.name}
+            </h2>
+            <p className="">{result.release_date || result.first_air_date}</p>
+            <div className="flex items-center mt-auto">
+              <MdThumbUp className="mt-0 mr-1" />
+              <p>{result.vote_count}</p>
+            </div>
           </div>
         </div>
       </Link>
