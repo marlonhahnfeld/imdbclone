@@ -3,6 +3,7 @@ const API_KEY = process.env.API_KEY;
 import Results from "@/components/Results";
 import React, { Suspense } from "react";
 
+//
 export default async function Home({ searchParams }) {
   const genre = searchParams.genre || "fetchTrending";
   const res = await fetch(
