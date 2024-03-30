@@ -5,7 +5,7 @@ import { MdThumbUp } from "react-icons/md";
 
 export default function Card({ result }) {
   return (
-    <div className="card max-w-48 max-h-auto mb-8 bg-base-100 shadow-xl mx-4 bg-slate-400 dark:bg-slate-700 hover:opacity-75 cursor-pointer ">
+    <div className="card max-w-48 max-h-auto mb-8  shadow-xl mx-4 bg-slate-400 dark:bg-slate-700 hover:opacity-75 cursor-pointer ">
       <Link href={`/movie/${result.id}`}>
         <div>
           <Image
