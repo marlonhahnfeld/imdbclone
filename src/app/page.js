@@ -20,10 +20,8 @@ export default async function Home({ searchParams }) {
   console.log(results);
 
   return (
-    <div>
-      <Suspense fallback={<h1>Loading...</h1>}>
-        {<Results results={results} />}
-      </Suspense>
-    </div>
+    <Suspense fallback={<h1>Loading...</h1>}>
+      <div>{<Results results={results} />}</div>
+    </Suspense>
   );
 }
