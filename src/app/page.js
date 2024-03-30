@@ -19,9 +19,5 @@ export default async function Home({ searchParams }) {
   const results = data.results;
   console.log(results);
 
-  return (
-    <Suspense fallback={<h1>Loading...</h1>}>
-      <div>{<Results results={results} />}</div>
-    </Suspense>
-  );
+  return <div>{<Results results={results} />}</div>;
 }
